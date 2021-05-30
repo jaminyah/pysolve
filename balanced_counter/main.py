@@ -1,32 +1,28 @@
 def check_bal(input: str) -> bool:
     
-    # lh = left hand, rh = right hand
     # w = wing, p = parenthesis, s = square
-
-    lhw, lhs, lhp = '{', '[', '('
-    rhw, rhs, rhp = '}', ']', ')'
 
     balanced = True
     wcount, scount, pcount = 0, 0, 0
 
     for char in input:
-        if char == lhw:
+        if char == '{':
             wcount = wcount + 1
-        elif char == lhs:
+        elif char == '[':
             scount = scount + 1
-        elif char == lhp:
+        elif char == '(':
             pcount = pcount + 1
-        elif char == rhw:
+        elif char == '}':
             wcount = wcount - 1
             if wcount < 0:
                 balanced = False
                 break
-        elif char == rhs:
+        elif char == ']':
             scount = scount - 1
             if scount < 0:
                 balanced = False
                 break
-        elif char == rhp:
+        elif char == ')':
             pcount = pcount - 1
             if pcount < 0:
                balanced = False
@@ -38,5 +34,5 @@ def check_bal(input: str) -> bool:
     return balanced
 
 if __name__ == '__main__':
-       result = check_bal('[{}{}()]')
+       result = check_bal('[{}{})(]')
        print(result)
