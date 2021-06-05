@@ -10,8 +10,7 @@ def checkIfPangram(input: str) -> bool:
     for char in chars:
         v.add(char)
     
-    output = u.issubset(v)
-    return output
+    return u.issubset(v)
 
 if __name__ == '__main__':
 
