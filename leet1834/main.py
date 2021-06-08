@@ -13,7 +13,7 @@ def getOrder(tasks: List[List[int]]) -> List[int]:
 
     cpuTasks: List[int] = []                                    # List of task processed by CPU
     pq = PriorityQueue()                                        # Data structure
-    clocktime = 1                                               # Total CPU run-time
+    cpuTime = 1                                               # Total CPU run-time
     enqueueTime = 0
     processTime = 0
 
@@ -24,7 +24,7 @@ def getOrder(tasks: List[List[int]]) -> List[int]:
         print(f"task:    {task}")
         enqueueTime = task[0]                                   # task[enqueueTime, processingTime] - index 0 is enqueueTime
  
-        if enqueueTime <= clocktime:  
+        if enqueueTime <= cpuTime:  
             
             pq.insert(task)                                     
             print(f"Priority Queue: {pq}")
@@ -33,8 +33,8 @@ def getOrder(tasks: List[List[int]]) -> List[int]:
             print(f"Task list: {tasks}")
             continue
         elif pq.isEmpty() == True:
-            clocktime = clocktime + 1
-            print(f"clocktime: {clocktime}")
+            cpuTime = cpuTime + 1
+            print(f"cpuTime: {cpuTime}")
         else:
             print(f"\npq.isEmpty: {pq.isEmpty()}")
             cpuTask = pq.getPriority()
@@ -44,8 +44,8 @@ def getOrder(tasks: List[List[int]]) -> List[int]:
             processingTime = cpuTask[1]                         # cpuTask[enqueueTime, processingTime] - index 1 is processingTime
             while processingTime != 0:
                 processingTime = processingTime - 1
-                clocktime = clocktime + 1
-                print(f"clocktime: {clocktime}")
+                cpuTime = cpuTime + 1
+                print(f"cpuTime: {cpuTime}")
 
     while pq.isEmpty() != True:
         print(f"\npq.isEmpty: {pq.isEmpty()}")
@@ -56,8 +56,8 @@ def getOrder(tasks: List[List[int]]) -> List[int]:
         processingTime = cpuTask[1]                             # cpuTask[enqueueTime, processingTime] - index 1 is processingTime
         while processingTime != 0:
             processingTime = processingTime - 1
-            clocktime = clocktime + 1
-            print(f"clocktime: {clocktime}")
+            cpuTime = cpuTime + 1
+            print(f"cpuTime: {cpuTime}")
 
     return cpuTasks
 
