@@ -37,8 +37,9 @@ def longestsequence(str1: str, str2: str) -> int:
                 else:
                     continue
             else:
-                ls = []
+                ls = []             # reset content to start a new sequence
                 j = j + 1
+                
         i = i + 1
         j = 0
     
