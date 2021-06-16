@@ -21,7 +21,7 @@ def longestsequence(str1: str, str2: str) -> int:
     len1 = len(str1)
     len2 = len(str2)
     longest = 0
-    ls = []
+    ls = []                         # longest sequence so far
 
     while i < len1:
         while j < len2:
