@@ -1,7 +1,7 @@
 # Find duplicates in a list
 
-## Time complexity: O(n)
-## Hash table space complexity: O(n)
+* Time complexity: O(n)
+* Hash table space complexity: O(n)
 
 
 <p align="center">
