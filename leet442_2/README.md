@@ -17,7 +17,7 @@ for num in nums:\
     nums[2 - 1] *= -1                                   # nums[1] = -5\
     elements = [2, -5, 2, 1, 1, 4, 3, 11, 4, 6, 8, 11]\
 \
-Pass 2: \
+Pass 2:  
 
 for num in nums:\
     array index = 1\
@@ -26,7 +26,7 @@ for num in nums:\
     nums[4 - 1] *= -1                                   # nums[4] = -1\
     elements = [2, -5, 2, 1, -1, 4, 3, 11, 4, 6, 8, 11]\
 \
-Pass 3:\
+Pass 3:  
 
 for num in nums:\
     array index = 2\
