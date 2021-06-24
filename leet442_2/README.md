@@ -36,3 +36,7 @@ for num in nums:\
 \
 Since the value at index 1 was found to be negative, this means the number 2
 was previously found.
+
+<p align="center">
+  <img src="https://github.com/jaminyah/drawio/blob/master/img/442/leet442_optimal.svg" alt="flowchart" /> 
+</p>
