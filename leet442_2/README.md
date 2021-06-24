@@ -10,29 +10,29 @@ i.e. nums[value - 1] *= -1
 
 Pass 1: 
 
-for num in nums:
-    array index = 0
-    value = abs(num): 2
-    nums[2 - 1] = 5                                     # nums[1] = 5
-    nums[2 - 1] *= -1                                   # nums[1] = -5
-    elements = [2, -5, 2, 1, 1, 4, 3, 11, 4, 6, 8, 11]
+for num in nums:\
+    array index = 0\
+    value = abs(num): 2\
+    nums[2 - 1] = 5                                     # nums[1] = 5\
+    nums[2 - 1] *= -1                                   # nums[1] = -5\
+    elements = [2, -5, 2, 1, 1, 4, 3, 11, 4, 6, 8, 11]\
+\
+Pass 2: \
 
-Pass 2: 
+for num in nums:\
+    array index = 1\
+    value = abs(num): 5\
+    nums[5 - 1] = 1                                     # nums[4] = 1\
+    nums[4 - 1] *= -1                                   # nums[4] = -1\
+    elements = [2, -5, 2, 1, -1, 4, 3, 11, 4, 6, 8, 11]\
+\
+Pass 3:\
 
-for num in nums:
-    array index = 1
-    value = abs(num): 5
-    nums[5 - 1] = 1                                     # nums[4] = 1
-    nums[4 - 1] *= -1                                   # nums[4] = -1
-    elements = [2, -5, 2, 1, -1, 4, 3, 11, 4, 6, 8, 11]
-
-Pass 3: 
-
-for num in nums:
-    array index = 2
-    value = abs(num): 2
-    nums[2 - 1] = -5                                     # nums[1] = -5
-    elements = [2, -5, 2, 1, -1, 4, 3, 11, 4, 6, 8, 11]
-
+for num in nums:\
+    array index = 2\
+    value = abs(num): 2\
+    nums[2 - 1] = -5                                     # nums[1] = -5\
+    elements = [2, -5, 2, 1, -1, 4, 3, 11, 4, 6, 8, 11]\
+\
 Since the value at index 1 was found to be negative, this means the number 2
 was previously found.
