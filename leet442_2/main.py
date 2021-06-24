@@ -6,11 +6,13 @@ class Solution:
         dupl = []
 
         for num in nums:
-            index = abs(num)
-            if nums[index - 1] < 0:
-                dupl.append(index)
+            value = abs(num)
+            print(f"value = abs(num): {value}")
+            if nums[value - 1] < 0:
+                dupl.append(value)
             else:
-                nums[index - 1] *= -1
+                nums[value - 1] *= -1
+                print(f"nums[{value} - 1]: {nums[value - 1]}")
 
         return dupl
 
