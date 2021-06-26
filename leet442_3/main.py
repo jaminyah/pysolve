@@ -1,28 +1,33 @@
 # Leetcode: 442
 
-# Method: Add count of each element to a hash table
-# Find all keys with values greater than 1
-# Add the values to an array. Return the array.
+# Reference: 
+# https://dev.to/effylh/leetcode-442-find-all-duplicates-in-an-array-4a2m
 
-def find_dups(l: list) -> list:
-    dups = []                           # empty list
-    hashMap = {}                        # empty dictionary
+# Method: Use a Set data structure.
+#   If the number to be added to the set does not increase the size of the set
+#   then the number is a duplicate
 
-    # count elements in the list
-    for elem in l:
-        if elem in hashMap:
-            hashMap[elem] += 1          # increment value of key
-        else:
-            hashMap[elem] = 1           # key not present so add key, set value to 1
-    
-    # add duplicated elements to array
-    for key in hashMap:
-        if hashMap[key] > 1:
-            dups.append(key)
+from typing import List
 
-    return dups
+class Solution:
+    def findDuplicates(self, nums: List[int]) -> List[int]:
+        
+        numSet = set()
+        dupl = []
+
+        for num in nums:
+            setSize = len(numSet)
+            numSet.add(num)
+
+            if setSize == len(numSet):
+                dupl.append(num)
+                
+        return dupl
+
 
 if __name__ == '__main__':
-    l1 = ['a', 'b', 'd', 'a', 'c', 'd', 'a', 'c', 'b']
-    dupl = find_dups(l1)
-    print(dupl)
+    elements = [2, 5, 2, 1, 1, 4]
+    
+    solution = Solution()
+    result = solution.findDuplicates(elements)
+    print(result)
