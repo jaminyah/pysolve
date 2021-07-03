@@ -126,7 +126,7 @@ Now, sum = left value, so current values of A[i], A[j], A[k] are a solution set.
 
 ---
 
-# Solution Flowchart
+## Solution Flowchart
 
 <p align="center">
   <img src="https://github.com/jaminyah/drawio/blob/master/img/3sum/3num_sum.svg" alt="flowchart" /> 

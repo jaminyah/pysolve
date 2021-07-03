@@ -3,7 +3,7 @@
 from solution import Solution
 import pytest
 
-class TestThreeSum():
+class TestThreeSum:
     def setup(self):
         self.soln = Solution()
 
