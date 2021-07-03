@@ -1,4 +1,4 @@
-# Run: 
+# Run: pytest test_solution.py
 
 from solution import Solution
 import pytest
