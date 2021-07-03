@@ -27,9 +27,3 @@ class Solution:
             output += elem
 
         return output
-
-if __name__ == "__main__":
-    #a = "hello, world!"
-    a = "whitespaces    4"
-    result = Solution().reverse(a)
-    print(result)
