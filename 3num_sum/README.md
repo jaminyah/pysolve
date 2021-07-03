@@ -11,7 +11,7 @@
 * If (A[j] + A[k]) > target, set k = k - 1
 * If (A[j] + A[k]) < target, set j = j + 1
 * For the next loop iteration, set i = i + 1
-* Note: if i + 1 == i - 1 continue to increment i to avoid duplicate evaluation.
+* Note: if i + 1 == i - 1, continue to increment i to avoid duplicate evaluation.
 * i.e. if i > 0 and a[i] == a[i - 1], continue
 * Similarly for index j
 * i.e. while j < k and A[j] == A[j - 1], j = j + 1
@@ -107,7 +107,7 @@ Since sum = (A[j] + A[k]) = ( 0 + 4 ) = 4 is greater than left, - 1 set k = k - 
 |:---|:---|:---|:---|:---|:---|
 |1|2|5|-1|0|2|
 
-For, A[i] = target - (A[j] + A[k]) <br/>
+For, A[i] = target - (A[j] + A[k -1]) <br/>
 -1 = 0 - ( 0 + 2) <br/>
 i.e. sum = ( 0 + 2 ) = 2 <br/>
 
@@ -117,9 +117,15 @@ Since sum is greater that the left value -1, set k = k - 1 so that A[k] = 1, whi
 |:---|:---|:---|:---|:---|:---|
 |1|2|5|-1|0|1|
 
-For, A[i] = target - (A[j] + A[k]) <br/>
+For, A[i] = target - (A[j] + A[k -1]) <br/>
 -1 = 0 - ( 0 + 1) <br/>
 i.e. sum = ( 0 + 1 ) = 1 <br/>
 
 Now, sum = left value, so current values of A[i], A[j], A[k] are a solution set. <br/>
 [-1, 0, 1] <br/>
+
+# Solution Flowchart
+
+<p align="center">
+  <img src="https://github.com/jaminyah/drawio/blob/master/img/3sum/3num_sum.svg" alt="flowchart" /> 
+</p>
