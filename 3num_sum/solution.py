@@ -41,10 +41,3 @@ class Solution:
                         k = k - 1
 
             return output
-
-
-if __name__ == '__main__':
-    #array = [0, 1, 0, 2, -1, -2]
-    array = [12, 3, 1, 2, -6, 5, 0, -8, -1, 6]
-    target = 0
-    print(Solution().threeSum(array, target))
