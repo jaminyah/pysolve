@@ -37,29 +37,43 @@ class LinkedList:
     def addNodeSorted(self, dataNode: DataNode) -> ListNode:
 
         listNode = ListNode(dataNode)
-        print(f"listNode gap: {listNode.dataNode.gap}")
+        print(f"\nlistNode gap: {listNode.dataNode.gap}")
 
         if self.head == None:
+            print("self.head == None")
             self.head = listNode
         else:
             currPtr = self.head
             prevPtr = self.head
             while currPtr != None:
+
+                # DEBUG
                 if listNode.dataNode.gap == currPtr.dataNode.gap:
-                    print(f"gaps == : {listNode.dataNode.gap}")
+                    print(f"\nlistNode.gap == currPtr.gap: == {listNode.dataNode.gap}")
+
                 if listNode.dataNode.gap >= self.head.dataNode.gap:
+                    print("\nlistNode.dataNode.gap >= self.head.dataNode.gap")
                     listNode.next = self.head
                     self.head = listNode
                     break
-                elif prevPtr.dataNode.gap > listNode.dataNode.gap and currPtr.dataNode.gap < listNode.dataNode.gap:
+
+                elif prevPtr.dataNode.gap > listNode.dataNode.gap and listNode.dataNode.gap >= currPtr.dataNode.gap:
+                    print("\nprevPtr.dataNode.gap > listNode.dataNode.gap and listNode.dataNode.gap >= currPtr.dataNode.gap")
+                    print(f"prevPtr.gap: {prevPtr.dataNode.gap}, currPtr.gap: {currPtr.dataNode.gap}, listNode.dataNode.gap: {listNode.dataNode.gap}")
                     prevPtr.next = listNode
                     listNode.next = currPtr
                     break
-                elif prevPtr.dataNode.gap > listNode.dataNode.gap and currPtr.next == None:
-                    prevPtr.next = listNode
+
+                elif currPtr.dataNode.gap >= listNode.dataNode.gap and currPtr.next == None:
+                    print("\ncurrPtr.dataNode.gap >= listNode.dataNode.gap and currPtr.next == None")
+                    print(f"prevPtr.gap: {prevPtr.dataNode.gap}, currPtr.gap: {currPtr.dataNode.gap}, listNode.dataNode.gap: {listNode.dataNode.gap}")
+                    currPtr.next = listNode
                     listNode.next = None
-                    currPtr = currPtr.next
+                    break
+
                 else:
+                    print("\nelse")
+                    print(f"prevPtr.gap: {prevPtr.dataNode.gap}, currPtr.gap: {currPtr.dataNode.gap}, listNode.gap: {listNode.dataNode.gap}")
                     prevPtr = currPtr
                     currPtr = currPtr.next
         return self.head
@@ -88,7 +102,7 @@ class Solution:
         linkedList = LinkedList()
  
         for k, v in hTable.items():
-            print(f"key: {k}, list: {v}")
+            print(f"\nkey: {k}, list: {v}")
 
             key = k
             indexes = v
