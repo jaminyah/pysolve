@@ -2,14 +2,33 @@
 
 $ python main.py <br/>
 <br/>
-{'a': [0, 2], 'b': [1], 'x': [3, 8], 'y': [4, 7], 'z': [5, 6], 'f': [9], 'g': [10, 11]} <br/>
-<br/>
+
+# Solution Concept
+    * input = "abaxyzzyxfgg"
+    * hashTable = buildHashTable(input)
+    * head = buildSortedListNodes(hashTable)
+    * getLongestPalindrome(head, input)
+
+### Input string
+input = "abaxyzzyxfgg" <br/>
+
+### Input dictionary
+key = char in string, value = index locations of char in string.
+{'a': [0, 2], 'b': [1], 'x': [3, 8], 'y': [4, 7], 'z': [5, 6], 'f': [9], 'g': [10, 11]}
+
+
+### Inserting nodes to maintain sorted a linkedlist
+#### def addNodeSorted(self, dataNode: DataNode) -> ListNode:
+
+##### Insert dictionary elem - 'a': [0, 2]
 key: a, list: [0, 2] <br/>
 <br/>
 listNode gap: 2 <br/>
 self.head == None <br/>
 gap: 2 <br/>
 <br/>
+
+##### Insert dictionary elem - 'b': [1]
 key: b, list: [1] <br/>
 <br/>
 listNode gap: 0 <br/>
@@ -19,6 +38,8 @@ prevPtr.gap: 2, currPtr.gap: 2, listNode.dataNode.gap: 0 <br/>
 gap: 2 <br/>
 gap: 0 <br/>
 <br/>
+
+##### Insert dictionary elem - 'x': [3, 8]
 key: x, list: [3, 8] <br/>
 <br/>
 listNode gap: 5 <br/>
@@ -28,6 +49,8 @@ gap: 5 <br/>
 gap: 2 <br/>
 gap: 0 <br/>
 <br/>
+
+##### Insert dictionary elem - 'y': [4, 7]
 key: y, list: [4, 7] <br/>
 <br/>
 listNode gap: 3 <br/>
