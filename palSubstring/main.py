@@ -127,29 +127,49 @@ class Solution:
 
     def getLongestPalindrome(self, head: ListNode, string: str) -> str:
 
-        subString = ""
+        longest = ""
+        if len(string) == 1:
+            longest = string
+            return longest
+ 
         nodePtr = head
-
         while nodePtr != None:
             indices = nodePtr.dataNode.indices
-            i = indices[0]
-            length = len(indices) - 1
-            j = indices[length]
-            print(f"i: {i}, j: {j}")
+            last = len(indices)
 
-            j = j + 1                           # slice operation stops at j - 1
-            subString = string[i:j]  
+            k = indices[0]
+            l = indices[last - 1]   
+            l = l + 1                          # handle slice operation
+            print(f"k: {k}, l: {l}")
+            subString = string[k:l]
             if self.isPalindrome(subString) == True:
-                break
+                if len(subString) > len(longest):
+                    longest = subString
             else:
-                subString = ""
-                nodePtr = nodePtr.next
-        
-        return subString
+                for i in range(last - 1):
+                    j = i + 1
+                    m = indices[i]
+                    n = indices[j]
+                    print(f"i: {m}, j: {n}")
+
+                    n = n + 1                    # slice operation stops at j - 1
+                    subString = string[m:n]  
+                    print(f"subString: {subString}")
+
+                    if self.isPalindrome(subString) == True:
+                        if len(subString) > len(longest):
+                            longest = subString
+                        #break
+                    else:
+                        subString = ""
+            nodePtr = nodePtr.next
+
+        return longest
 
  
 if __name__ == '__main__':
-    input = "abaxyzzyxfgg"
+    #input = "abaxyzzyxfgg"
+    input = "abcdefgfedcbazzzzzzzzzzzzzzzzzzzz"
     soln = Solution()
     table = soln.buildHashTable(input)
     print(table)
