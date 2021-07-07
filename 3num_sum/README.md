@@ -33,6 +33,11 @@ Sort the input array in ascending order.
 [-2, -1, 0, 1, 2, 4]
 
 #### Step 2 - First loop through the array:
+
+<p align="center">
+  <img src="img/3num_sum_1.svg" alt="indices layout" /> 
+</p>
+
 Create three indices i, j, k <br/>
 i: i = 0 <br/>
 j: j = i + 1 <br/>
@@ -60,6 +65,10 @@ Since the array is sorted in ascending order shifting k to the left will result 
 
 k = k - 1 <br/>
 
+<p align="center">
+  <img src="img/3num_sum_2.svg" alt="indices layout" /> 
+</p>
+
 |i|j|k|A[i]|A[j]|A[k - 1]|
 |:---|:---|:---|:---|:---|:---|
 |0|1|5|-2|-1|2|
@@ -73,6 +82,10 @@ So, 0 - ( 1 ) = -1 which is less that -2 on the left.<br/>
 
 Increment j to increase the remainder <br/> 
 j = j + 1 <br/>
+
+<p align="center">
+  <img src="img/3num_sum_3.svg" alt="indices layout" /> 
+</p>
 
 |i|j|k|A[i]|A[j + 1]|A[k]|
 |:---|:---|:---|:---|:---|:---|
