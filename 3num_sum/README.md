@@ -107,6 +107,10 @@ i: i = 1 <br/>
 j: j = i + 1 <br/>
 k: len(array) - 1, the last index in the array <br/>
 
+<p align="center">
+  <img src="img/3num_sum_4.svg" alt="indices layout" /> 
+</p>
+
 The sorted the input array in ascending array is: <br/>
 [-2, -1, 0, 1, 2, 4]
 
@@ -121,6 +125,10 @@ i.e. sum = ( 0 + 4 ) = 4 <br/>
 #### Step 5: 
 Since sum = (A[j] + A[k]) = ( 0 + 4 ) = 4 is greater than left, - 1 set k = k - 1 so that A[k] = 2, which is a smaller value.
 
+<p align="center">
+  <img src="img/3num_sum_5.svg" alt="indices layout" /> 
+</p>
+
 |i|j|k|A[i]|A[j]|A[k]|
 |:---|:---|:---|:---|:---|:---|
 |1|2|5|-1|0|2|
@@ -130,6 +138,10 @@ For, A[i] = target - (A[j] + A[k -1]) <br/>
 i.e. sum = ( 0 + 2 ) = 2 <br/>
 
 Since sum is greater that the left value -1, set k = k - 1 so that A[k] = 1, which is a smaller value.
+
+<p align="center">
+  <img src="img/3num_sum_6.svg" alt="indices layout" /> 
+</p>
 
 |i|j|k|A[i]|A[j]|A[k]|
 |:---|:---|:---|:---|:---|:---|
