@@ -8,7 +8,7 @@
 * k = len(array) - 1, last index
 
 <p align="center">
-  <img src="3num_sum_1.svg" alt="indices layout" /> 
+  <img src="img/3num_sum_1.svg" alt="indices layout" /> 
 </p>
 
 * Set up the equation, A[i] = target - (A[j] + A[k])
