@@ -1,6 +1,6 @@
 # Fibonacci - memoize using tabulation method 
 
-def fib(n: int) -> int:
+def fibonacci(n: int) -> int:
     
     if n <= 1:
         return n

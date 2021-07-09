@@ -1,7 +1,10 @@
 import pytest
-from main import fib
+from fib import fibonacci
 
 class TestFib:
     
     def test_fib(self):
-        assert fib(20) == 6765
+        assert fibonacci(5) == 5
+
+    def test_fib(self):
+        assert fibonacci(20) == 6765
