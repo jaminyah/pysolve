@@ -118,12 +118,20 @@ class Solution:
 
         return headNode
 
-    def isPalindrome(self, input: str) -> bool:
-        reversed = input[::-1]
-        if input == reversed:
-            return True
-        else:
-            return False
+    def isPalindrome(self, string: str) -> bool:
+
+        i = 0
+        j = len(string) - 1
+        input = string.lower()
+
+        while (i <= j):
+            if input[i] == input[j]:
+                i = i + 1
+                j = j - 1
+            else:
+                return False
+        return True
+    
 
     def getLongestPalindrome(self, head: ListNode, string: str) -> str:
 
@@ -145,35 +153,33 @@ class Solution:
             if self.isPalindrome(subString) == True:
                 if len(subString) > len(longest):
                     longest = subString
+                    return longest
             else:
-                for i in range(last - 1):
-                    j = i + 1
-                    m = indices[i]
-                    n = indices[j]
-                    print(f"i: {m}, j: {n}")
-
-                    n = n + 1                    # slice operation stops at j - 1
-                    subString = string[m:n]  
-                    print(f"subString: {subString}")
-
+                for i in range(1, l):
+                    print(f"i: {i}, l: {l}")
+                    subString = string[i:l]
                     if self.isPalindrome(subString) == True:
                         if len(subString) > len(longest):
                             longest = subString
-                        #break
+                            return longest
+
+            # loop thru the remaining indices
+            for i in range(last - 1):
+                j = i + 1
+                m = indices[i]
+                n = indices[j]
+                print(f"i: {m}, j: {n}")
+
+                n = n + 1                    # slice operation stops at j - 1
+                subString = string[m:n]  
+                print(f"subString: {subString}")
+
+                if self.isPalindrome(subString) == True:
+                    if len(subString) > len(longest):
+                        longest = subString
                     else:
                         subString = ""
+
             nodePtr = nodePtr.next
 
         return longest
-
- 
-if __name__ == '__main__':
-    #input = "abaxyzzyxfgg"
-    input = "abcdefgfedcbazzzzzzzzzzzzzzzzzzzz"
-    soln = Solution()
-    table = soln.buildHashTable(input)
-    print(table)
-
-    head = soln.buildSortedListNodes(table)
-    result = soln.getLongestPalindrome(head, input)
-    print(f"Palindrome substring: {result}")
