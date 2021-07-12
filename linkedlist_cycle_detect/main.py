@@ -1,3 +1,6 @@
+# Reference:
+# https://www.baeldung.com/cs/cycle-start-node-linked-list
+
 from linkedlist import LinkedList 
 from node import ListNode
 
