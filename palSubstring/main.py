@@ -153,7 +153,7 @@ class Solution:
             if self.isPalindrome(subString) == True:
                 if len(subString) > len(longest):
                     longest = subString
-                    return longest
+                    #return longest
             else:
                 for i in range(1, l):
                     print(f"i: {i}, l: {l}")
@@ -161,7 +161,7 @@ class Solution:
                     if self.isPalindrome(subString) == True:
                         if len(subString) > len(longest):
                             longest = subString
-                            return longest
+                            #return longest
 
             # loop thru the remaining indices
             for i in range(last - 1):
@@ -183,3 +183,13 @@ class Solution:
             nodePtr = nodePtr.next
 
         return longest
+
+"""
+if __name__ == '__main__':
+    input = "ccabcaaaabbccccccc"
+    soln = Solution()
+    table = soln.buildHashTable(input)
+    head = soln.buildSortedListNodes(table)
+    result = soln.getLongestPalindrome(head, input)
+    print(result)
+"""

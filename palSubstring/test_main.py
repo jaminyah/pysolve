@@ -13,6 +13,7 @@ class TestLongestPalindrome:
         head = self.soln.buildSortedListNodes(table)
         assert self.soln.getLongestPalindrome(head, input) == "aa"
 
+
     def test_longest2(self):
         input = "a"
         table = self.soln.buildHashTable(input)
@@ -30,3 +31,12 @@ class TestLongestPalindrome:
         table = self.soln.buildHashTable(input)
         head = self.soln.buildSortedListNodes(table)
         assert self.soln.getLongestPalindrome(head, input) == "zz2345abbbba5432zz"
+
+
+
+    def test_longest4(self):
+        input = "ccabcaaaabbccccccc"
+        table = self.soln.buildHashTable(input)
+        head = self.soln.buildSortedListNodes(table)
+        assert self.soln.getLongestPalindrome(head, input) == "ccccccc"
+
