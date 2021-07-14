@@ -1,3 +1,8 @@
+'''
+ Reference:
+    https://www.algotree.org/algorithms/dynamic_programming/longest_common_subsequence/
+ ''' 
+
 from typing import List
 
 def lcs_dp(a:List[str], b: List[str]) -> (int, str):
@@ -20,9 +25,9 @@ def lcs_dp(a:List[str], b: List[str]) -> (int, str):
             else:
                 table[i][j] = max(table[i - 1][j], table[i][j - 1])
     
-    count = table[rows][cols]           # last position in table will accumulate count
-    #return count
-
+    count = table[rows][cols]        # last position in table will accumulate count
+    # return count
+    
     # build lcs of chars
     i = rows
     j = cols
