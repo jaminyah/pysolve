@@ -5,28 +5,27 @@
 
 from typing import List
 
-def lcs_dp(a:List[str], b: List[str]) -> (int, str):
+def lcs_dp(a: str, b: str) -> List[str]:
 
     rows = len(a)
     cols = len(b)
     count = 0
 
     # 2D table initialized with zeros
-    table = [0] * (rows + 1)        # or table = [ [-1] * (rows + 1) for i in range(cols + 1)]
+    table = [0] * (rows + 1)                    # or table = [ [-1] * (rows + 1) for i in range(cols + 1)]
     for k in range(rows + 1):
         table[k] = [0] * (cols + 1) 
 
     for i in range(rows + 1):
-        for j in range(cols + 1):
+        for j in range(cols + 1):               # increment to include cols in range
             if i == 0 or j == 0:
-                table[i][j] = 0
+                table[i][j] = 0                 # set row 1 and col 1 to zero
             elif a[i - 1] == b[j - 1]:
                 table[i][j] = 1 + table[i - 1][j - 1]
             else:
                 table[i][j] = max(table[i - 1][j], table[i][j - 1])
     
-    count = table[rows][cols]        # last position in table will accumulate count
-    # return count
+    count = table[rows][cols]                   # last position in table will accumulate count
     
     # build lcs of chars
     i = rows
@@ -44,9 +43,7 @@ def lcs_dp(a:List[str], b: List[str]) -> (int, str):
             j = j - 1
     
     chars =  list(reversed(substr))       # or substr[::-1]
-    s = ""
-    s = s.join(chars)
-    return (count, s)
+    return chars
 
 if __name__ == '__main__':
     seq = ["agort", "bgpoat"]
