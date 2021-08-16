@@ -1,0 +1,10 @@
+Set GitHub access token
+
+Reference:
+https://stackoverflow.com/questions/20195304/how-do-i-update-the-password-for-git
+
+```bash
+git remote remove origin
+git remote add origin https://[TOKEN]@github.com/[USER]/[REPO]
+git push
+```
