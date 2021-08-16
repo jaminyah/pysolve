@@ -23,7 +23,7 @@ Step - 4: Since array[j] != 0, decrement j <br/>
 Step - 5: array[i] = 3, array[j] = 0 <br/>
 Step - 6: Since array[j] = 0, swap element at index i with element at index j. array[i] = 0, array[j] = 3 <br/>
 Step - 7: Increment i, decrement j. array[i] = 7, array[j] = 2 <br/>
-Step - 8: Decrement j, index i is not less than index j, return the array. <br/>
+Step - 8: Decrement j. When index j is less than index i, return the array. <br/>
 
 <p align="center">
   <img src="https://github.com/jaminyah/drawio/blob/master/movezeros.svg" alt="flowchart" /> 
