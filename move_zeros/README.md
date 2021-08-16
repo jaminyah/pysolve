@@ -16,12 +16,12 @@ Assumption: Input array is mutable. If not, create a mutable array from the inpu
 
 input array = [3, 7, 2, 0, 1, 9];
 
-Step - 1: array[i] = 3, array[j] = 9  
-Step - 2: Since array[j] != 0, decrement j
-Step - 3: array[i] = 3, array[j] = 1
-Step - 4: Since array[j] != 0, decrement j
-Step - 5: array[i] = 3, array[j] = 0
-Step - 6: Since array[j] = 0, swap element at index i with element at index j
-          array[i] = 0, array[j] = 3
-Step - 7: Increment i, decrement j. array[i] = 7, array[j] = 2
-Step - 8: Decrement j, index i is not less than index j, return the array.
+Step - 1: array[i] = 3, array[j] = 9 <br/> 
+Step - 2: Since array[j] != 0, decrement j <br/>
+Step - 3: array[i] = 3, array[j] = 1 <br/>
+Step - 4: Since array[j] != 0, decrement j <br/>
+Step - 5: array[i] = 3, array[j] = 0 <br/>
+Step - 6: Since array[j] = 0, swap element at index i with element at index j <br/>
+          array[i] = 0, array[j] = 3 <br/>
+Step - 7: Increment i, decrement j. array[i] = 7, array[j] = 2 <br/>
+Step - 8: Decrement j, index i is not less than index j, return the array. <br/>
