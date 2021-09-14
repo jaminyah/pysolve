@@ -10,6 +10,10 @@ Selection Sort Algorithm
 
 3. Compare element at index with element at index + 1 until to the array length
 
+<p align="center">
+  <img src="https://github.com/jaminyah/drawio/blob/master/img/sort/selection_sort.svg" alt="sort algo" /> 
+</p>
+
 Consider, input array = [25, 13, 41, 32, 66, 14, 50]
 
 loop - 1: <br/>
