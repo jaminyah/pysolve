@@ -2,6 +2,8 @@
 
 Algorithm <br/>
 
+Consider, a = [9, 36, 21, 22, 16, 10]
+
 for-loop: i = 1 <br/>
 
     while-loop is not satisfied 
