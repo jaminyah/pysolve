@@ -1,5 +1,9 @@
 """
 Selection Sort Algorithm
+
+Performance: 
+Time complexity: O(n^2)         # two embedded for loops
+Space complexity: O(1)          # input array is mutable 
 """
 
 def selection_sort(array):

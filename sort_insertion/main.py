@@ -1,14 +1,16 @@
 def insertion_sort(array):
-    for i in range(1, len(array)):
-        while array[i - 1] > array[i] and i >= 1:
-            # swap a[i] with a[i - 1]
-            temp = array[i]
-            array[i] = array[i - 1]
-            array[i -1] = temp
+    arraylen = len(array)
+    for i in range(1, arraylen):
+        j = i
+        while array[j - 1] > array[j] and j >= 1:
+            # swap a[j] with a[j - 1]
+            temp = array[j]
+            array[j] = array[j - 1]
+            array[j -1] = temp
 
-            # decrement i, 
+            # decrement j, 
             # continue the while loop
-            i = i - 1
+            j -= 1
 
     return array
 
