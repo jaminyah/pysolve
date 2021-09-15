@@ -39,6 +39,6 @@ def merge_sort(array):
     return array
             
 if __name__ == '__main__':
-    a = [2, 3, 5, 1, 7, 4, 4, 4, 2, 6, 0]
+    a = [2, 3, 5, 1, 7, 4, 4, 4, 2, 6, 1]
     result = merge_sort(a)
     print(result)
